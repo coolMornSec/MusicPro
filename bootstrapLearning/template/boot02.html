@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- 为了确保适当的触屏和缩放，可以添加viewport元数据标签 -->
+    <!-- 使用user-scalable = no,禁止用户缩放 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../js/jquery-3.4.1.js"></script>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <title>form</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #quanzhi {
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="" role="form" class="form-horizontal" id="quanzhi">
+            <div class="form-group">
+                <label for="professor" class="control-label col-lg-2">姓名</label>
+                <div class="col-lg-4">
+                    <input type="text" name="" id="professor" class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="professor" class="control-label col-lg-2">职业</label>
+                <div class="col-lg-4">
+                    <input type="text" name="" id="professor" class="form-control">
+                </div>
+            </div>
+            <ul>
+                <li>123</li>
+                <li>124</li>
+                <li>125</li>
+                <li>126</li>
+                <li>127</li>
+            </ul>
+        </form>
+    </div>
+
+    <script>
+        // //js
+        // var arr = [1,2,3,4];
+        // var a = arr.forEach((item, index, origin) =>{
+        //     console.log(item, index, origin);
+        //     return 2;
+        // });
+        // console.log(a); // a == undefined;
+
+        // jQuery
+        // var arr = [1,2,3,4];
+        // var a = $.each(arr,(index, item)=>{
+        //     if (item>2) {
+        //         return false;
+        //     }
+        //     console.log(index, item);
+        //     item += 1;
+        // });
+        // console.log(arr);
+
+        // 钩子函数中this指向 window
+        // $('li').each((index, item)=>{
+        //     console.log(index, $(this));
+        // });
+        // $('li').each(function(){
+        //     console.log($(this).text());
+        // });
+    </script>
+</body>
+</html>
