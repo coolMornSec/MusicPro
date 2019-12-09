@@ -1,13 +1,52 @@
-.sld {
-	/* border: 1px solid #007BFF; */
+
+body {
+	position: relative;
 }
 
+.header {
+	position: absolute;
+	z-index: 500;
+	display: flex;
+	width: 100%;
+	height: 80px;
+}
+.logo {
+	margin-left: 2.65rem;
+	width: 200px;
+	height: 80px;
+	line-height: 8.55rem;
+}
+.logo img {
+	
+}
+.top-nav {
+	margin-left: 16.22rem;
+	line-height: 4.25rem;
+}
+.top-nav li {
+	padding: 12px 15px;
+}
+.top-nav a{
+	color: #FFF;
+	font-size: 16px;
+}
+
+.right-img {
+	width: 78px;
+	height:78px;
+}
+
+/* 轮播图part */
+.container-fluid {
+	padding: 0;
+}
 .carousel-indicators {
 	margin-left: 0%;
 }
 .carousel-indicators li {
 	background-color: #D4D4D4;
 }
+
 .product {
 	width: 100%;
 	height: 111px;
