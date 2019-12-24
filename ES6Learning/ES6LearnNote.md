@@ -43,8 +43,39 @@
 > split()			把字符串分隔为数组
 
 
+## 函数
+
+### 参数默认值
+
+> 在书写形参时直接给形参赋值，即为默认值
+
+- [ 对arguments的影响 ]
+  
+  只要给函数加上参数默认值，该函数会自动匹配严格模式下的规则：arguments和形参脱离。
+  ```
+  function sum(a,b){
+	  a = 3, b=5;
+	  console.log('arguments: ', arguments[0], arguments[1]);
+	  console.log('形参：', a, b);
+  }
+  ```
+
+- [ 留意暂时性死区 ]
+
+  形参和ES6中的let和const声明一样，具有作用域，并且根据参数的声明顺序，存在暂时性死区
+
+  ```
+  function test(a=b, b){
+  	console.log(a, b);
+  }
+  // cannot access 'b' before initializaiton at test
+  test(undefined, 2);
+  
+  
+  ```
 
 
+## 剩余参数，展开运算符
 
 
 
