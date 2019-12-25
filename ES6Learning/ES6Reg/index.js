@@ -1,7 +1,9 @@
 // u4e00-u9fa5 指的是Unicode编码中文基本汉字的范围
 const input = document.getElementById('name');
 // input.onkeyup = function(){
-	
+// 	this.value = this.value.replace(/([^0-9A-z\u4e00-\u9fa5]|[\^\_])/g,'');
+// }
+// input.onblur = function(){
 // 	this.value = this.value.replace(/([^0-9A-z\u4e00-\u9fa5]|[\^\_])/g,'');
 // }
 /** input框值发生变化时，立即触发 */
@@ -14,11 +16,21 @@ input.oninput = function(){
 // 当输入框失去焦点时，判断当前值是否与之前储存值相等，如不同则触发onchange事件
 // 非IE浏览器回车键也能触发
 // input.onchange = function(){
-// 	console.log('change');
-// 	this.value = this.value.replace(/[^0-9A-z]/gi,'');
+// 	this.value = this.value.replace(/([^0-9A-z\u4e00-\u9fa5]|[\^\_])/g,'');
 // }
 
+// input.onblur = function(){
+// 	this.value = this.value.replace(/([^0-9A-z\u4e00-\u9fa5]|[\^\_])/g,'');
+// }
 
+// input.onkeydown = function(){
+// 	console.log('keydown');
+// 	this.value = this.value.replace(/([^0-9A-z\u4e00-\u9fa5]|[\^\_])/g,'');
+// }
+// input.onkeypress = function(){
+// 	console.log('keypress');
+// 	this.value = this.value.replace(/([^0-9A-z\u4e00-\u9fa5]|[\^\_])/g,'');
+// }
 
 // input.oninput = function(){
 // 	let val = input.value;
