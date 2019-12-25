@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<h2>浅谈拷贝的几种方式</h2>
+		<script src="../jquery-3.4.1.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			// 1、Array 拷贝
+			const arr = [
+				{0: true, 'a': 123, 'b': 456},
+				{'a': 111, 'b': 222},
+			];
+			// 方法一
+			// let arr1 = $.extend(false,[],arr);		// 浅层拷贝, 如果元素有对象,拷贝的是引用至，修改属性值会有影响
+			// 方法二
+			let arr1 = $.extend(true,[],arr);			// 深层拷贝, 修改属性值不会造成影响
+			arr1[0].a = '###';
+			
+			// console.log(arr1, arr);
+			
+			// 方法三
+			// const copyArr = [...arr];					// 浅层拷贝，同方法一
+			// copyArr[0].a = '@@@';
+			// console.log(copyArr, arr);
+			
+			// 2、对象拷贝
+			let obj = {
+				name: 'lingchen',
+				age: '18',
+				lovers: {
+					one: 'snow',
+					two: 'bell',
+					three: 'cloud'
+				},
+				hobby: 'eat'
+			}
+			let obj2 = {
+				name: 'lingchen',
+				age: '20',
+				lovers: {
+					one: 'rain',
+					two: 'bell',
+					three: 'cloud'
+				},
+				loveSong: '追梦赤子心'
+			}
+			// 拷贝
+			// let temp = $.extend(false, {}, obj);			// 浅层拷贝
+			// let temp = $.extend(true, {}, obj);			// 深层拷贝
+			// let temp = {...obj};							// 浅层拷贝
+			// let temp = {
+			// 	...obj,
+			// 	lovers: {
+			// 		...obj.lovers
+			// 	}
+			// };											// 深层拷贝
+		
+			// temp.lovers.one = 'rain';
+			// console.log(temp, obj);
+			
+			// 合并
+			// $.extend(obj, obj2);					// 合并
+			// $.extend(true, obj, obj2);			// 合并
+			
+			// obj.lovers.one = 'frost';
+			// console.log(obj, obj2);
+			
+			// 个别属性值替换
+			obj = {
+				...obj,
+				age: 100
+			}
+			console.log(obj);
+		</script>
+	</body>
+</html>
