@@ -42,6 +42,60 @@
 > replace()			替换指定字符串
 > split()			把字符串分隔为数组
 
+## 函数
+
+**使用函数默认参数时，不允许同名函数**
+**只有未传递参数或者传undefined时，才会使用默认值，null被看作是有效的传递**
+```
+// 不报错
+function fn(name,name){
+ console.log(name);
+}
+
+// 报错
+//SyntaxError: Duplicate parameter name not allowed in this context
+function fn(name,name,age=17){
+ console.log(name+","+age);
+}
+```
+**箭头函数 v => v**
+**当函数需要返回对象时，需要用()括起来，与{}代码块进行区分**
+```
+// 报错
+let f = (id,name) =>{id:id, name:name}
+f(6,2);  // SyntaxError: Unexpected token :
+
+// 不报错
+let f = (item,index) =>({a:1, b:2})
+f(6,2);  // {id:6, name:2}
+```
+**注意: 没有 this、super、arguments 和 new.target 绑定。**
+箭头函数里没有this对象，此时的this是外层的this对象，即window
+```
+// 回调函数
+var Person = {
+    'age': 18,
+    'sayHello': function () {
+      setTimeout(function () {
+        console.log(this.age);
+      });
+    }
+};
+var age = 20;
+Person.sayHello();  // 20
+ 
+var Person1 = {
+    'age': 18,
+    'sayHello': function () {
+      setTimeout(()=>{
+        console.log(this.age);
+      });
+    }
+};
+var age = 20;
+Person1.sayHello();  // 18
+```
+
 
 
 

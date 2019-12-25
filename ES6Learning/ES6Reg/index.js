@@ -70,3 +70,17 @@ function IsEmail(str) {
 // let newStr = str.replace('ll', '玲玲');
 // let newStr = str.replace(/ll/, '玲玲');
 // console.log('替换后的字符串——————' + newStr, '原字符串——————' + str);
+
+const abc = [{
+	    0: true,
+		'a': 123,
+		'b': 456
+	},{
+		'a': 111,
+		'b': 222
+		
+}];
+let arr = $.extend(true,[],abc);
+let obj = arr[0];
+console.log(obj);
+// console.log(···obj);
