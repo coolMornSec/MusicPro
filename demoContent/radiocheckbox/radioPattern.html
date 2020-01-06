@@ -6,21 +6,56 @@
 		<link rel="stylesheet" href="./radio.css">
 	</head>
 	<body>
+		<div class="content">
+			<h2>使用HTML和CSS实现单选按钮的样式优化</h2>
+		</div>
+		
 		<div class="container">
 			<div class="item">
-				<input type="radio" name="popStar" class="modify-input" id="" checked>
-				<label>林俊杰</label>
+				<input type="radio" name="popStar" value="LJJ" class="modify-input" id="ra1" checked>
+				<label for="ra1">林俊杰</label>
 			</div>
 			<div class="item">
-				<input type="radio" name="popStar" class="modify-input" id="">
-				<label>陈奕迅</label>
+				<input type="radio" name="popStar" value="Eason" class="modify-input" id="ra2">
+				<label for="ra2">陈奕迅</label>
 			</div>
 			<div class="item">
-				<input type="radio" name="popStar" class="modify-input" id="">
-				<label>王力宏</label>
+				<input type="radio" name="popStar" value="Wlh" class="modify-input" id="ra3">
+				<label for="ra3">王力宏</label>
 			</div>
 			
-			
+			<button type="button" id="btn">点我</button>
+			<hr>
+			<p>
+				CSS选择器中，'~'表示某元素后所有同级的指定元素，强调所有
+			</p>
+			<p>
+				'+' 表示某元素后紧挨着的兄弟元素，强调单个
+			</p>
 		</div>
+		<script>
+			const radioList = document.getElementsByClassName('modify-input');
+			console.log(typeof radioList);	// 此处获取的是类数组,可通过ES6中Array.from()转换为真正的数组
+			
+			const arr = Array.from(radioList);
+			const cli = document.getElementById('btn');
+			cli.onclick = function() {
+				let per = getRadioCode('popStar');
+				alert(per);
+			}
+			/**
+			 * 根据单选框name值，获取当前选中值
+			 * @param {String} str[单选框name值]
+			 */
+			function getRadioCode(str){
+				let inputList = document.getElementsByName(str);
+				for (let i = 0; i < inputList.length; i++) {
+					const ele = inputList[i]
+					if(ele.checked === true){
+						return ele.value;
+					}
+				}
+			}
+		</script>
 	</body>
 </html>
