@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Learn ES6 Module</title>
+		<link rel="stylesheet" href="./index.css">
+	</head>
+	
+	<body>
+		
+		<div class="container">
+			<h2>ES6 Module</h2>
+			<hr>
+			<div class="btn-zone">
+				<button class="btn" id="sing">sing</button>
+				<button class="btn" id="dance">dancing</button>
+				<button class="btn" id="run">running</button>
+				<button class="btn" id="cry">crying</button>
+			</div>
+			
+			
+		</div>
+		<!-- 由于type属性值为module，浏览知道这是ES6模块 -->
+		<!-- 该JS自动使用严格模式，且该脚本内部顶层的this关键字，返回undefined，不是window -->
+		<script type="module" src="./index.js"></script>
+	</body>
+</html>

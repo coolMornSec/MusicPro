@@ -1,0 +1,10 @@
+.container {
+	padding-top: 30px;
+}
+.select {
+	width: 15%;
+	height: 34px;
+	padding: 0 5px;
+	margin: 0 2px;
+	cursor: pointer;
+}

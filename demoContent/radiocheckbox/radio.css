@@ -1,0 +1,46 @@
+:root, body {
+	width: 100%;
+}
+.container {
+	width: 80%;
+	margin: 30px auto;
+}
+.item {
+	display: inline-block;
+	position: relative;
+}
+.modify-input {
+	visibility: hidden;
+}
+
+
+.item input[type="radio"] + label{
+	position: relative;
+	cursor: pointer;
+}
+
+.item input+label::before {
+	content: '';
+	position: absolute;  
+	width: 18px;
+	height: 18px;
+	left: 0px;
+	top: 2px;
+	border: 1px solid #aaa;
+	border-radius: 50%;
+}
+
+.item input:checked+label::before {
+    box-shadow: 0 0 6px #24b7e5;
+}
+
+.item input:checked+ label::after{
+	content: '';
+	position: absolute;    /*针对label进行绝对定位*/
+	left: 4px;
+	top: 6px;
+	border-radius: 50%;    /*设置圆角*/
+	width: 12px;
+	height: 12px;
+	background: #24b7e5;
+}
