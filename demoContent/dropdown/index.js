@@ -38,3 +38,6 @@ function loadSelect(index){
 	}
 	$city.html(tpl);
 }
+
+const $div = $('#tablecc').find('div.sel');
+console.log($div.text());

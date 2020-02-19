@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>函数参数解构</title>
+	</head>
+	<body>
+		<h2 style="text-align: center;">函数参数解构</h2>
+	
+		<script>
+			// 定义ajax函数，不传参时，解构匹配结果为undefined，参数取默认值
+			// 1、解构参数对象为undefined时，解构对象为默认值{}
+			// 2、method, url解构匹配结果为undefined，取默认值
+			function ajax({
+				method = 'get',
+				url = '/'
+			}={}){
+				console.log(method, url);
+			}
+			// 传参调用
+			ajax({method: 'post', url: '/www.baidu.com'});	// 'post', '/www.baidu.com'
+			
+			// 不传参调用
+			ajax();				// 'get', '/'
+	
+			
+		</script>
+	
+	</body>
+</html>

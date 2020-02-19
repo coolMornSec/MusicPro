@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>对象解构</title>
+	</head>
+	<body>
+		<h2 style="text-align: center">对象解构</h2>
+		
+		
+		<script>
+			
+			const animal = {
+				name: '大黄',
+				age: 8,
+				yark: '汪汪',
+				son: {
+					name: '小黄',
+					age: '1',
+				}
+			}
+			
+			// 解构
+			// 先定义变量, 后结构赋值
+			// 1.同名赋值    {变量名}	[等于原始值]
+			let {name='world', age, son, m=5, n} = animal;
+			console.log(name, age, son, m, n);
+			
+			// 2.变量被定义后，解构赋值时没有该变量，未赋值
+			// let {name, haha} = animal;
+			// console.log(haha);	// undefined 
+			
+			// 3.非同名复制  {属性名: 变量名}		【变量名在后]
+			// let {name, age, son: sun} = animal;
+			// console.log(son);		// son is not defined
+			// console.log(name, sun);		// 大黄 {name: "小黄", age: "1"}
+			
+			// 4、深层解构
+			// let {name, age, son: {name: sonname}} = animal;
+			// console.log(name, sonname, son);
+			
+			// 剩余参数	...
+			// const user = {
+			// 	name: '莫凡',
+			// 	age: '18',
+			// 	lovers: {
+			// 		name: '穆宁雪',
+			// 		age: 18
+			// 	}
+			// }
+			// // 实现将name属性赋值，剩余属性放到obj中
+			// let {name, ...obj} = user;
+			// 	console.log(name, obj);
+		</script>
+	</body>
+</html>
