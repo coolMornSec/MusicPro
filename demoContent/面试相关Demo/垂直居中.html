@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>垂直居中相关</title>
+		<style type="text/css">
+	
+			.container {
+				position: relative;
+				width: 800px;
+				height: 500px;
+				border: 1px solid #000;
+			}
+			.container > div {
+				display: inline-block;
+				width: 200px;
+				height: 100px; 
+				background-color: #009000;
+			}
+			/* 固定宽高 */
+			/* 1、position: absolute */
+		/* 	.item {
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				margin-left: -100px;
+				margin-top: -50px;
+			} */
+			/* 2、position 设置边界为0 */
+			/* .item {
+				position: absolute;
+				left: 0;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				margin: auto;
+			} */
+			/* 3、calc() */
+		/* 	.item {
+				position: absolute;
+				left: calc(50% - 100px);
+				top: calc(50% - 50px);
+			} */
+			
+			/* 1、transform 自适应 */
+			/* .item {
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+			} */
+			
+			/* 2、父类设置text-align: center, 行高等于父类高度，子元素继承行高，同时设置vertical-align: middle */
+			.container {
+				position: relative;
+				width: 60%;
+				height: 500px;
+				border: 1px solid #000;
+				margin: 30px auto;
+				text-align: center;
+				line-height: 500px;
+			}
+			
+			.item {
+				line-height: inherit;
+				vertical-align: middle;
+			}
+			
+			
+			/* 3、flex布局 */
+	/* 		.container {
+				display: flex;
+				width: 60%;
+				height: 80%;
+				border: 1px solid #000;
+				margin: 30px auto;
+				justify-content: center;
+				align-items: center;
+			} */
+	
+		</style>
+	</head>
+
+	<body>
+		
+		<div class="container">
+			<div class="item"></div>
+		</div>
+		
+		
+	</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>响应式设计</title>
+		<script src="../jquery-3.4.1.js"></script>
+		<scirpt src="../bootstrap.js"></scirpt>
+		<link rel="stylesheet" href="../bootstrap.css">
+		<style>
+			:root, body {
+				width: 100%;
+			}
+			.container {
+				margin-top: 100px;
+			}
+			.item {
+				border: 1px solid black;
+				height: 50px;
+				padding: 5px;
+			}
+			.con {
+				height: 180px;
+				border: 2px solid green;
+				padding: 10px 30px;
+				overflow: auto;
+			}
+			.test {
+				height: 200px;
+			}
+			
+			/* 设置滚动条的样式 */
+			.con::-webkit-scrollbar {
+				width:10px;
+			}
+			/* 滚动槽 */
+			.con::-webkit-scrollbar-track {
+				/* -webkit-box-shadow:inset006pxrgba(0,0,0,0.3); */
+				border-radius:10px;
+			}
+			/* 滚动条滑块 */
+			.con::-webkit-scrollbar-thumb {
+				border-radius:10px;
+				background:rgba(0,0,0,0.1);
+				-webkit-box-shadow:inset006pxrgba(0,0,0,0.5);
+			}
+				.con::-webkit-scrollbar-thumb:window-inactive {
+				background:rgba(255,0,0,0.4);
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row con">
+
+				<div class="col-md-3 col-lg-6 col-sm-4 item">222</div>
+				<div class="col-md-3 col-lg-6 col-sm-4 item">222</div>
+				<div class="col-md-3 col-lg-6 col-sm-4 item">222</div>
+				<div class="col-md-3 col-lg-6 col-sm-4 item">222</div>
+				<div class="col-md-3 col-lg-6 col-sm-4 item">222</div>
+				<div class="col-md-3 col-lg-6 col-sm-4 item">222</div>
+				<div class="col-md-3 col-lg-6 col-sm-4 item">222</div>
+				<div class="col-md-3 col-lg-6 col-sm-4 item">222</div>
+				<div class="col-md-3 col-lg-6 col-sm-4 item">222</div>
+				<div class="col-md-3 col-lg-6 col-sm-4 item">222</div>
+				<div class="col-md-3 col-lg-6 col-sm-4 item">222</div>
+				<div class="col-md-3 col-lg-6 col-sm-4 item">222</div>
+			</div>
+	
+		</div>
+		
+		
+		
+		
+	</body>
+</html>

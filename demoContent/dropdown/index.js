@@ -41,3 +41,13 @@ function loadSelect(index){
 
 const $div = $('#tablecc').find('div.sel');
 console.log($div.text());
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<script src="../jquery-3.4.1.js"></script>
+	<title>JQuery Load函数</title>
+</head>
+<body>
+	<div>
+		<h3>JQuery Load函数</h3>
+		<button id="btn">click me</button>
+	</div>
+	
+	<div id="load"></div>
+	
+	<script>
+		var $btn = $('#btn');
+		$btn.on('click', function(){
+			
+			console.log('111');
+			var url = '/MusicPro/demoContent/jQuery-load/abc.html';
+			var data = {"a": "666"};
+			$('#load').load(url, function(){
+				console.log('加载成功');
+			})
+		})
+		
+	</script>
+</body>
+</html>

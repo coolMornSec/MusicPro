@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>textContent和innerText</title>
+</head>
+<body>
+	<div id="con">
+		有的事忘就忘了
+		<script>
+			const a = '666';
+		</script>
+		有的人错了也不一定就是错了
+		<div style="display: none;">你觉得呢</div>
+	</div>
+	
+	<h3>textContent 和 innerText的区别</h3>
+	<ul>
+		<li>1、textContent 获取元素内所有文本元素 ---- innerText不会获取元素内所有文本元素</li>
+		<li>2、innerText受CSS影响</li>
+		<li>3、textContent不会触发重排 ---- innText会触发重排</li>
+		<li>4、textContent是标准方法 ---- innerText 由IE引入</li>
+		<li>5、因此出于性能考虑，vue中v-text更新的是textContent，替换所有元素</li>
+	</ul>
+	<script>
+		var con = document.getElementById('con');
+		console.log(con.textContent);
+		console.log(con.innerText);
+	</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Translate</title>
+		<style>
+			:root, body {
+				width: 100%;
+			}
+			.container {
+				width: 800px;
+				height: 600px;
+				border: 2px solid #000; 
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin: 100px auto;
+				/* transform: translateX(-50%) translateY(-50%); */
+			}
+			.rect {
+				width: 300px;
+				height: 300px;
+				border: 1px solid #008000;
+				transform: skewX(-30deg);
+			
+			}
+		
+		}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<!-- tanslate -->
+			<div class="rect"></div>
+			
+			<!-- -ms-transform: skew(-30deg); /* IE 9 */
+			-webkit-transform: skew(-30deg); /* Safari and Chrome */ -->
+		</div>
+	</body>
+</html>

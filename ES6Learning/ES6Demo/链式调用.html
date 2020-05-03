@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			
+		
+			let num = 4;
+			const  p = new Promise((resolve, reject)=> {
+				if(num>2){
+					resolve('a');
+				}else {
+					reject(1);
+				}
+			});
+			
+			const  p2 = new Promise((resolve, reject)=> {
+				if(num>3){
+					resolve('b');
+				}else {
+					reject(2);
+				}
+			});
+			// 成功数据
+			let a = [];
+			// 失败数据
+			let b = [];
+			p.then(data => {
+				a.push(data);
+			}, error => {
+				b.push(error);
+			}).finally(data => {
+				// data此处没意义
+				p2.then(data => {
+					a.push(data);
+					console.log('data2----', a, b);
+				}, error=> {
+					b.push(error);
+					console.log('error2--------', a, b);
+				})
+			});
+			
+			</script>
+	</body>
+</html>

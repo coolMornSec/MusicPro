@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>finally使用</title>
+	</head>
+	<body>
+		<script>
+			// const pro = new Promise( (resolve, reject)=> {
+			// 	let num = 2;
+			// 	setTimeout(()=> {
+			// 		if(num < 3){
+			// 			resolve('111')
+			// 		}else {
+			// 			reject('222');
+			// 		}
+			// 	}, 1000)
+			// });
+			// pro.then(data=> {
+			// 	console.log(data);
+			// }, error=> {
+			// 	console.log(error);
+			// }).finally(()=> {
+			// 	console.log('mmp');
+			// });
+			(0000123)
+			// 数字补零
+			function prefixInteger(num, length) {
+			 return (Array(length).join('0') + num).slice(-length);
+			}
+			
+			let str = '123';
+			let a = str+1;
+			// let a = prefixInteger(str, 4);
+			console.log(a);
+		</script>
+	</body>
+</html>

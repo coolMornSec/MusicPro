@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		
+		
+		<input type="date" id="date">;
+		<button type="button" id="btn">Click Me</button>
+		<script>
+			
+			
+			// 计算年龄，返回X岁X月X日  
+			// 输入参数1.出生日期，2.当前日期  
+			function calAge(birthday){  
+				// var   strDate1   =   birthday + "   00:00:00.0";  
+				// var   strDate2   =   new Date().format('Y-m-d') + "   00:00:00.0";  
+				// strDate1=strDate1.substring(0,strDate1.lastIndexOf(".")).replace(/-/g, "/ ");  
+				// strDate2=strDate2.substring(0,strDate2.lastIndexOf(".")).replace(/-/g, "/ ");  
+				// //去掉毫秒 把-替换成/ 如果不替换转成时间戳类型火狐会出问题  
+				// var   date1   =  Date.parse(strDate1);  
+				// var   date2   =  Date.parse(strDate2);  
+				// var day = Math.ceil((date2-date1)/(60*60*1000*24));  
+				// var age = '';   // 真实年龄  
+				// var year = Math.floor(day/365);  
+				// var y = day%365;  
+				// var month = Math.floor(y/30);  
+				// var d = Math.floor(day%365%30);  
+				// if(year > 0){  
+				// 	age += year + '岁';  
+				// }  
+				// if(month > 0){  
+				// 	age += month + '月';  
+				// }  
+				// if(d>0){  
+				// 	age += d+'天';  
+				// }  
+		  
+				// return age;  
+			}  
+			
+			
+			const input = document.getElementById('date');
+			const btn = document.getElementById('btn');
+			btn.onclick = function(){
+				console.log(input.target);
+			}
+			
+			let str = '4128251994032837398';
+			let b = str.substr(6,4);
+			console.log(b,str);
+		</script>
+	</body>
+</html>

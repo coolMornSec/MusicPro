@@ -43,6 +43,12 @@
 			console.log(s1.has({}));		// false	由于每个对象都是不相等的,所以为false
 			console.log(s1.has(obj));		// true	
 			console.log(s1.has('b'));		// true
+			// size属性, 只读
+			console.log(s1.size);
+			
+			// clear()清空Set中数据
+			s1.clear();
+			console.log(s1);
 		</script>
 	</body>
 </html>
