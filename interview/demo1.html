@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>面试题</title>
+    <style>
+        .container {
+            width: 300px;
+            height: 100px;
+            border: 1px solid #aaa;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content" id="content"></div>
+        <div class="content"></div>
+        <div class="content"></div>
+    </div>
+    <script>
+        let content = document.getElementsByClassName('content');
+        console.log(content);   // content.length = 2
+        let c = document.getElementById('content');
+        c.className = 'bar'
+        console.log(content);   // content.length = 2
+
+        // 阅读下列代码，文foo.count的值
+        function foo(){
+            this.count ++;
+            
+        }
+        foo.count = 0;
+
+        for(var i=0; i<10; i++){
+            if(i%5){
+                foo()
+            }
+        }
+        
+        console.log(foo.count);     // foo.count = 0;
+        console.log(this.count);
+    </script>
+</body>
+</html>
