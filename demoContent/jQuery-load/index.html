@@ -14,7 +14,7 @@
 	</div>
 	
 	<div id="load"></div>
-	
+	<input id="it" type="text" data-index="5">
 	<script>
 		var $btn = $('#btn');
 		$btn.on('click', function(){
@@ -27,6 +27,8 @@
 			})
 		})
 		
+		var a = $('#it').data('index');
+		console.log(a);
 	</script>
 </body>
 </html>

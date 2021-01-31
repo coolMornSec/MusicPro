@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			// string number nul undefiend Object Symbol
+			var a = 123;
+			var b = 'abc';
+			var c = null;
+			var d = undefined;
+			var sol = Symbol('aaa')
+			var e = NaN;
+			var obj = {
+				a: 'b'
+			}
+			var arr = [123, 456];
+			var num = new Number(123)
+		
+			console.log( num instanceof Number)
+			console.log(typeof sol);		//symbol
+			// console.log(typeof NaN);			// number
+			
+			// isNaN()全局方法,用于判断一个变量是否能被Number成功转化(涉及类型转换)，本身不是NaN, 如果不能被Number成功转化,同样返回true
+			// 而ES6在Number对象上也提供了isNaN()方法, 用于判断变量本身是否是NaN, 不涉及类型转换
+			function variableType(val){
+				// 首先判断是否为NaN
+				let type = '';
+				if( Number.isNaN(val) ) {
+					type = 'NaN';
+				}else {
+					type = Object.prototype.toString.call(val);
+				}
+				return type;
+			}
+			
+			// 利用typeof 可以判断string number symbol类型的变量,但是如果是new出来的就会显示为"object"
+			
+			
+			
+		</script>
+	</body>
+</html>
